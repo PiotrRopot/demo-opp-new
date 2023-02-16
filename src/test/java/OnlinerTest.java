@@ -63,8 +63,8 @@ public class OnlinerTest {
         BTN_OPEN_Element.click();
         WebElement BTN_TXT_EMAIL_ENTRE = driver.findElement(By.xpath(OnlinerPage.TXT_EMAIL_ENTRE));
         BTN_TXT_EMAIL_ENTRE.click();
-        WebElement INPUT_LOGIN = driver.findElement(By.xpath(OnlinerPage.TITLE_EMAIL));
-        INPUT_LOGIN.sendKeys("Mail@Mail");
+        WebElement INPUT_LOGIN = driver.findElement(By.xpath(OnlinerPage.TITLE_EMAIL_OP));
+        INPUT_LOGIN.sendKeys(OnlinerPage.MAIL);
         driver.quit();
     }
 }
