@@ -36,7 +36,7 @@ public class OnlinerTest {
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1));
         driver.get(OnlinerPage.URL);
 
         WebElement BTN_OPEN_Element = driver.findElement(By.xpath(OnlinerPage.BTN_OPEN));
@@ -50,7 +50,23 @@ public class OnlinerTest {
         WebElement TITLE_PASSWORD_Element = driver.findElement(By.xpath(OnlinerPage.TITLE_PASSWORD));
         Assert.assertEquals(TITLE_PASSWORD_Element.getText(), OnlinerPage.TXT_TITLE_PASSWORD);
         driver.quit();
-
     }
 
+    @Test
+    public void testOnlinerLoginFormWithEmptyPassword() {
+        WebDriver driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1));
+        driver.get(OnlinerPage.URL);
+        WebElement BTN_OPEN_Element = driver.findElement(By.xpath(OnlinerPage.BTN_OPEN));
+        BTN_OPEN_Element.click();
+        WebElement BTN_TXT_EMAIL_ENTRE = driver.findElement(By.xpath(OnlinerPage.TXT_EMAIL_ENTRE));
+        BTN_TXT_EMAIL_ENTRE.click();
+        WebElement INPUT_LOGIN = driver.findElement(By.xpath(OnlinerPage.TITLE_EMAIL));
+        INPUT_LOGIN.sendKeys("Mail@Mail");
+        driver.quit();
+    }
 }
+
+

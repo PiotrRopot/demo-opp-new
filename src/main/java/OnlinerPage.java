@@ -9,9 +9,16 @@ public class OnlinerPage {
     public static final String TITLE = "//div[@class='auth-form__title auth-form__title_big auth-form__title_condensed-default']";
     public static final String BTN_LOGIN = "//*[@id=\"auth-container\"]/div/div[2]/div/form/div[3]/button";
 
-    public static final String TITLE_EMAIL = "//*[@id=\"auth-container\"]/div/div[2]/div/form/div[1]/div/div[2]/div/div/div[1]/div/input";
+   public static final String TITLE_EMAIL = "//*[@id=\"auth-container\"]/div/div[2]/div/form/div[1]/div/div[2]/div/div/div[1]/div/input";
     public static final String TITLE_PASSWORD = "//*[@id=\"auth-container\"]/div/div[2]/div/form/div[2]/div/div/div[1]/div/input";
 
     public static final String TXT_TITLE_EMAIL = "Укажите ник или e-mail";
     public static final String TXT_TITLE_PASSWORD = "Укажите пароль";
+
+    public static final String TXT_EMAIL_ENTRE = "//*[@id=\"auth-container\"]/div/div[2]/div/form/div[1]/div/div[2]/div/div/div[1]/div/input";
+
+    public static final String MAIL = "Piotr.Ropot@gmail.com";
+
+
+
 }
